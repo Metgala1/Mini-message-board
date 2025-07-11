@@ -3,6 +3,10 @@ const messages = require('../Data/dataBase')
 
 const formRouter = Router()
 
+formRouter.get("/new", (req, res) => {
+    res.render("form")
+} )
+
 formRouter.post('/new', (req,res) => {
     const {user, text} = req.body;
     messages.push(

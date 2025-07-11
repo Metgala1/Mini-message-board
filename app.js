@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express()
 const path = require('path')
+require('dotenv').config()
+const PORT = process.env.PORT
 
-const messages = require('./Data/dataBase')
 
 app.set("views", path.join(__dirname,"views"))
 app.set("view engine", "ejs");
@@ -14,16 +15,10 @@ const indexRouter = require('./routes/indexRouter')
 
 
 
-app.get('/new', (req, res) => {
-    res.render("form")
-})
-
+app.get('/new', formRouter)
 app.post('/new' , formRouter)
-
 app.get('/', indexRouter);
 
-app.listen(5000, () => {
-    console.log("Server running on localhost:5000")
+app.listen(PORT, () => {
+    console.log(`Server running on localhost:${PORT}`)
 })
-
-module.exports = app;
