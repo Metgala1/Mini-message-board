@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Message Board</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Mini Message Board</h1>
+
+        <div class="message-list">
+            <% for (let i = 0; i < messages.length; i++) { %>
+                <div class="message-card">
+                    <p class="message-text"><%= messages[i].text %></p>
+                    <p class="message-user">— <%= messages[i].user %></p>
+                    <p class="message-date"><%= messages[i].added.toLocaleString() %></p>
+                </div>
+            <% } %>
+        </div>
+
+        <div class="add-message">
+            <a href="/new" class="add-button">➕ Add a new message</a>
+        </div>
+    </div>
+</body>
+</html>
