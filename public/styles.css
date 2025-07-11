@@ -4,12 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-     background: linear-gradient(145deg, #0d0d1f 0%, #1a1a3b 100%);
-}
 
 body {
     font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(145deg, #0d0d1f 0%, #1a1a3b 100%);
     color: #e0e0ff;
     min-height: 100vh;
     display: flex;
@@ -186,7 +184,7 @@ body::before {
 
 .form-group input {
     padding: clamp(8px, 2vw, 12px);
-    font-size: clamp(0.9em, 2.2vw, 1em);
+    font-size: clamp(16px, 2.5vw, 18px); 
     border: 1px solid rgba(0, 255, 255, 0.4);
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.1);
@@ -293,7 +291,7 @@ body::before {
 
     .form-group input {
         padding: clamp(6px, 1.5vw, 8px);
-        font-size: clamp(0.8em, 2vw, 0.9em);
+        font-size: clamp(16px, 2.2vw, 16px); 
     }
 
     .add-button, .submit-button {
