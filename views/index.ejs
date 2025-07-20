@@ -16,10 +16,7 @@
                     <p class="message-text"><%= messages[i].message %></p>
                     <p class="message-user">— <%= messages[i].name %></p>
                     <p class="message-date"><%= messages[i].date.toLocaleString() %></p>
-                     <form action="/delete/<%= messages[i].id %>" method="POST">
-        <button type="submit">Delete</button>
-      </form>
-                </div>
+                    
             <% } %>
         </div>
 
